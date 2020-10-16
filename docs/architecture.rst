@@ -86,9 +86,7 @@ curmonth       Message table name to use for storing :term:`WebPush` messages.
 ============   ==============
 
 Autopush uses an optimistic deletion policy for ``node_id`` to avoid delete
-calls when not needed. During a delivery attempt, the endpoint will check the
-``node_id`` for the corresponding :term:`UAID`. If the client is not connected, it will
-clear the ``node_id`` record for that :term:`UAID` in the router table.
+calls when not needed. 
 
 If an endpoint node discovers during a delivery attempt that
 the ``node_id`` on record does not have the client connected, it will clear the
